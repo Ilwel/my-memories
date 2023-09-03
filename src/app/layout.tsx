@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-body selection:bg-high-med">{children}</body>
+      <body className="font-body selection:bg-high-med bg-base h-screen text-text">{children}</body>
     </html>
   )
 }
