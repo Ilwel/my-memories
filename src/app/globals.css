@@ -15,6 +15,15 @@
       active:bottom-1
       p-3 text-center
       font-bold
+      select-none
+  }
+
+  .btn-warning{
+    @apply btn border-gold text-gold
+  }
+
+  .btn-error{
+    @apply btn border-love text-love
   }
 }
 
