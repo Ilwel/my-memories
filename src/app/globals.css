@@ -39,6 +39,16 @@
   }
 }
 
+@layer utilities{
+  .ur{
+    @apply bg-gradient-to-r from-gold via-love to-gold-2
+  }
+
+  .text-gr{
+    @apply text-transparent bg-clip-text
+  }
+}
+
 .background-animate {
   background-size: 400%;
 
