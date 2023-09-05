@@ -44,6 +44,62 @@
     @apply bg-gradient-to-r from-gold via-love to-gold-2
   }
 
+  .sr{
+    @apply bg-gradient-to-r from-pine via-text to-foam
+  }
+
+  .r{
+    @apply bg-text
+  }
+
+  .n{
+    @apply bg-rose
+  }
+
+  .ur-desc-title{
+    @apply text-gold-2
+  }
+
+  .ur-desc-text{
+    @apply text-gold
+  }
+
+  .sr-desc-title{
+    @apply text-pine
+  }
+
+  .sr-desc-text{
+    @apply text-foam
+  }
+
+  .r-desc-title{
+    @apply text-text
+  }
+
+  .n-desc-text{
+    @apply text-rose
+  }
+
+  .n-desc-title{
+    @apply text-rose
+  }
+
+  .r-desc-text{
+    @apply text-text
+  }
+
+  .card-count{
+    @apply background-animate text-gr absolute bottom-4 left-4 font-extrabold select-none
+  }
+
+  .card-rarity{
+    @apply background-animate text-surface p-2 rounded text-xs font-bold select-none ml-auto relative top-4 left-4
+  }
+
+  .card-description{
+    @apply w-full text-sm break-keep line-clamp-3
+  }
+
   .text-gr{
     @apply text-transparent bg-clip-text
   }
