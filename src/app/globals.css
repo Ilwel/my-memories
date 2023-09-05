@@ -140,3 +140,22 @@
   --high-med: #403d52;
   --high-high: #524f67;
 }
+
+.memory-card-enter{}
+
+.memory-card-enter-active{}
+
+.memory-card-exit{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.memory-card-exit-active{
+  opacity: 0;
+  transform: translateX(80%);
+  transition: 500ms;
+}
+
+.memory-card-exit-done{
+  display: none;
+}

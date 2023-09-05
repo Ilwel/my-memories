@@ -1,4 +1,7 @@
+"use client"
 import Image from "next/image";
+import { CSSTransition } from 'react-transition-group'
+import { useState } from 'react'
 
 const Rarity = {
   ur: "ETERNO",
@@ -40,23 +43,34 @@ export default function MemoryCard(props: MemoryCardProps){
   }
 
   const styles = descColors[props.rarity as keyof typeof descColors]
+
+  const [isEnter, setIsEnter] = useState(true)
+
   return (
-  <div className={props.rarity + " background-animate p-0.5 rounded"}>    
-    <div className="w-72 flex gap-2 flex-col items-start bg-surface p-8 rounded relative">
+  <CSSTransition
+    in={isEnter}
+    timeout={500}
+    classNames="memory-card"
+  >
+    <div className={props.rarity + " background-animate p-0.5 rounded absolute"}>    
+      <div onClick={() => {
+        setIsEnter(false)
+      }} className="cursor-pointer w-72 flex gap-2 flex-col items-start bg-surface p-8 rounded ">
 
-        <h3 className={props.rarity + " background-animate text-gr text-gold-2 select-none"}>Primeiro Encontro</h3>
+          <h3 className={props.rarity + " background-animate text-gr text-gold-2 select-none"}>Primeiro Encontro</h3>
 
-        <Image className="w-full rounded select-none" src={"https://placehold.co/600x400/908caa/e0def4/png?text=Sua Memória"}  alt="card placeholder" width={200} height={200}/>
+          <Image className="w-full rounded select-none" src={"https://placehold.co/600x400/908caa/e0def4/png?text=Sua Memória"}  alt="card placeholder" width={200} height={200}/>
 
-        <div className="text-sm p-4 bg-overlay rounded">
-        <h3 className={styles.desc.title}>Descrição: </h3>
-          <p className={styles.desc.text + " card-description"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi molestias quis adipisci eos a! Quaerat unde eveniet iure! Nesciunt, voluptates? Magnam cupiditate autem enim accusamus voluptatem? Dolorem alias aut provident.
-          </p>
+          <div className="text-sm p-4 bg-overlay rounded">
+          <h3 className={styles.desc.title}>Descrição: </h3>
+            <p className={styles.desc.text + " card-description"}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi molestias quis adipisci eos a! Quaerat unde eveniet iure! Nesciunt, voluptates? Magnam cupiditate autem enim accusamus voluptatem? Dolorem alias aut provident.
+            </p>
+          </div>
+          <p className={props.rarity + " card-count"}>1/1</p>
+          <p className={props.rarity + " card-rarity"}>{Rarity[props.rarity]}</p>
         </div>
-        <p className={props.rarity + " card-count"}>1/1</p>
-        <p className={props.rarity + " card-rarity"}>{Rarity[props.rarity]}</p>
-      </div>
-  </div>
+    </div>
+  </CSSTransition>
   )
 }
