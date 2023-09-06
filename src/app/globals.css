@@ -49,7 +49,7 @@
   }
 
   .r{
-    @apply bg-text
+    @apply  bg-gradient-to-r from-text via-gray-500 to-white
   }
 
   .n{
@@ -141,21 +141,36 @@
   --high-high: #524f67;
 }
 
-.memory-card-enter{}
-
-.memory-card-enter-active{}
-
-.memory-card-exit{
-  opacity: 1;
-  transform: translateX(0%);
+.aux-stack{
+  animation: aux-apear .5s ease;
 }
 
-.memory-card-exit-active{
-  opacity: 0;
-  transform: translateX(80%);
-  transition: 500ms;
+.main-stack{
+  animation: main-apear .5s ease;
 }
 
-.memory-card-exit-done{
-  display: none;
+@keyframes aux-apear{
+  0%{
+    opacity: 0;
+    /* transform: scale(0.8); */
+    transform: translateX(-80%);
+  }
+  100%{
+    opacity: 1;
+    /* transform: scale(1); */
+    transform: translateX(0);
+  }
+}
+
+@keyframes main-apear{
+  0%{
+    opacity: 0  ;
+    /* transform: scale(0.8); */
+    transform: translateX(80%);
+  }
+  100%{
+    opacity: 1;
+    /* transform: scale(1); */
+    transform: translateX(0);
+  }
 }

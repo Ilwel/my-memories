@@ -1,9 +1,7 @@
 "use client"
 import Image from "next/image";
-import { CSSTransition } from 'react-transition-group'
-import { useState } from 'react'
 
-const Rarity = {
+export const Rarity = {
   ur: "ETERNO",
   sr: "INESQUECÍVEL",
   r:  "MARCANTE",
@@ -11,7 +9,9 @@ const Rarity = {
 }
 
 export interface MemoryCardProps{
+  id: string,
   rarity: keyof typeof Rarity,
+  animation?: string
 }
 
 export default function MemoryCard(props: MemoryCardProps){
@@ -44,18 +44,9 @@ export default function MemoryCard(props: MemoryCardProps){
 
   const styles = descColors[props.rarity as keyof typeof descColors]
 
-  const [isEnter, setIsEnter] = useState(true)
-
   return (
-  <CSSTransition
-    in={isEnter}
-    timeout={500}
-    classNames="memory-card"
-  >
-    <div className={props.rarity + " background-animate p-0.5 rounded absolute"}>    
-      <div onClick={() => {
-        setIsEnter(false)
-      }} className="cursor-pointer w-72 flex gap-2 flex-col items-start bg-surface p-8 rounded ">
+    <div className={props.rarity + " background-animate p-0.5 rounded absolute " + props.animation}>    
+      <div className="cursor-pointer w-72 aspect-[9/12] flex gap-2 flex-col items-start bg-surface p-8 rounded ">
 
           <h3 className={props.rarity + " background-animate text-gr text-gold-2 select-none"}>Primeiro Encontro</h3>
 
@@ -71,6 +62,5 @@ export default function MemoryCard(props: MemoryCardProps){
           <p className={props.rarity + " card-rarity"}>{Rarity[props.rarity]}</p>
         </div>
     </div>
-  </CSSTransition>
   )
 }
