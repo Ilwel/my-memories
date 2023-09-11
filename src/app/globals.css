@@ -31,15 +31,15 @@
       p-3 text-center
       font-bold
       select-none
-      hover:bg-foam hover:text-overlay
+      hover:bg-foam hover:text-base
   }
 
   .btn-warning{
-    @apply btn border-gold text-gold hover:bg-gold hover:text-overlay
+    @apply btn border-gold text-gold hover:bg-gold hover:text-base
   }
 
   .btn-error{
-    @apply btn border-love text-love hover:bg-love hover:text-overlay
+    @apply btn border-love text-love hover:bg-love hover:text-base
   }
 
   .modal{
