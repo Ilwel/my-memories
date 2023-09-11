@@ -54,7 +54,7 @@
   }
 
   .sr{
-    @apply bg-gradient-to-r from-pine via-text to-foam
+    @apply bg-gradient-to-r from-text via-pine to-foam
   }
 
   .r{
