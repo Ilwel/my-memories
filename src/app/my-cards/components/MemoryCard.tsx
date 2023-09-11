@@ -61,13 +61,13 @@ export default function MemoryCard(props: MemoryCardProps){
 
   return (
     <div className={props.rarity + `${!props.inDetails ? ' absolute' : ' relative'}` + " background-animate p-0.5 rounded " + props.animation}>    
-      <div className={"cursor-pointer w-72 aspect-[9/12] flex gap-2 flex-col items-start bg-surface p-8 rounded "}>
+      <div className={" select-none cursor-pointer w-72 aspect-[9/12] flex gap-2 flex-col items-start bg-surface p-8 rounded "}>
         {!props.inDetails && (
           <Info onClick={ () => dispatch(open('1'))} color={styles.desc.more}  className={" info"}/>
         )}
-          <h3 className={props.rarity + " background-animate text-gr text-gold-2 select-none"}>Primeiro Encontro</h3>
+          <h3 className={props.rarity + " background-animate text-gr text-gold-2"}>Primeiro Encontro</h3>
 
-          <Image priority className="w-full rounded select-none" src={"https://placehold.co/600x400/908caa/e0def4/png?text=Sua Memória"}  alt="card placeholder" width={200} height={200}/>
+          <Image priority className="w-full rounded" src={"https://placehold.co/600x400/908caa/e0def4/png?text=Sua Memória"}  alt="card placeholder" width={200} height={200}/>
 
           <div className="text-sm p-4 bg-overlay rounded">
           <h3 className={styles.desc.title}>Descrição: </h3>
