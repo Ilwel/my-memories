@@ -40,7 +40,7 @@
   }
 
   .modal{
-    @apply absolute h-screen w-screen bg-black/70 flex items-center justify-center
+    @apply absolute h-screen w-screen bg-base/70 flex items-center justify-center
   }
 
   .info{

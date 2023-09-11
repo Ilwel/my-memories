@@ -1,5 +1,7 @@
+import { Providers } from '@/redux/provider'
 import './globals.css'
 import type { Metadata } from 'next'
+import MemoryDetails from './my-cards/components/modals/MemoryDetails'
 
 export const metadata: Metadata = {
   title: 'My Memories',
@@ -13,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-body selection:bg-high-med bg-base h-screen text-text">{children}</body>
+      <body className="font-body selection:bg-high-med bg-base h-screen text-text">
+        <Providers>
+          <MemoryDetails/>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }
