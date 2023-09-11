@@ -24,18 +24,27 @@
       rounded
       transition ease-in-out duration-500 
       relative
-      active:bottom-1
+      hover:animate-my-bounce
       p-3 text-center
       font-bold
       select-none
+      hover:bg-foam hover:text-overlay
   }
 
   .btn-warning{
-    @apply btn border-gold text-gold
+    @apply btn border-gold text-gold hover:bg-gold hover:text-overlay
   }
 
   .btn-error{
-    @apply btn border-love text-love
+    @apply btn border-love text-love hover:bg-love hover:text-overlay
+  }
+
+  .modal{
+    @apply absolute h-screen w-screen bg-black/70 flex items-center justify-center
+  }
+
+  .info{
+    @apply rounded background-animate absolute right-4 top-4 duration-500 opacity-50 hover:opacity-100
   }
 }
 
@@ -113,6 +122,10 @@
   animation: AnimationName 3s ease infinite;
 }
 
+.bounce{
+  animation: bounce .01s ease;
+}
+
 @keyframes AnimationName {
   0%,
   100% {
@@ -120,6 +133,29 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes bounce {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    
+    transform: translateY(-4px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+  
+}
+
+@keyframes grow-up {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
   }
 }
 

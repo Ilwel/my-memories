@@ -29,6 +29,10 @@ const config: Config = {
       fontFamily:{
         logo:['MuseoModerno'],
         body: ['Quicksand']
+      },
+      animation:{
+        'my-bounce': 'bounce .5s ease infinite;',
+        'grow-up': 'grow-up .5s ease;'
       }
     },
   },
