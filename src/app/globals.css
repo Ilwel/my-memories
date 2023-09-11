@@ -102,7 +102,7 @@
   }
 
   .card-rarity{
-    @apply background-animate text-surface p-2 rounded text-xs font-bold select-none ml-auto relative top-4 left-4
+    @apply background-animate text-surface p-2 rounded text-xs font-bold select-none
   }
 
   .card-description{
@@ -213,4 +213,42 @@
     transform: translateX(0);
     z-index: 2;
   }
+}
+
+/* Scrollbar CSS */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C4A7E7 #6E6A86;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #6E6A86;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #EB6F92;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #EBBCBA;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #C4A7E7;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #EBBCBA;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #EB6F92;
 }
