@@ -12,7 +12,7 @@ export default function MemoryDetails(){
   return (
     open
     ?<div className="modal z-10">
-      <div className="bg-surface h-2/3 w-3/4 rounded p-8 relative flex gap-8 items-start">
+      <div className="bg-surface h-2/3 w-3/5 rounded p-8 relative flex gap-8 items-start from-top">
         <XCircle height={30} width={30} onClick={() => dispatch(close())} color={"#eb6f92"} className=" info"/>
         <MemoryCard inDetails={true} id={id as string} rarity="ur"/>
         <div className="h-full flex flex-col gap-2 items-start">
@@ -20,8 +20,8 @@ export default function MemoryDetails(){
           <p className="text-subtle"> <span className="font-bold">De:</span>  Ilwel</p>
           <p className="text-subtle"> <span className="font-bold">Para:</span>  Bruna</p>
           <p className="text-subtle"> <span className="font-bold">Raridade:</span>  Eterno</p>
-          <p className="text-subtle"> <span className="font-bold">Criada em:</span>  12-07-2023</p>
-          <p className="text-subtle"> <span className="font-bold">Presenteada em:</span>  11-08-2023</p>
+          <p className="text-subtle"> <span className="font-bold">Criado em:</span>  12-07-2023</p>
+          <p className="text-subtle"> <span className="font-bold">Presenteado em:</span>  11-08-2023</p>
           <h3 className="mt-4">Descrição:</h3>
           <div className="bg-overlay p-4  rounded h-full overflow-y-scroll flex flex-col gap-4">
             <p className="text-subtle whitespace-pre-wrap">

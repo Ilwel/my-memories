@@ -129,6 +129,10 @@
   animation: bounce .01s ease;
 }
 
+.from-top{
+  animation: from-top .5s ease forwards;
+}
+
 @keyframes AnimationName {
   0%,
   100% {
@@ -160,6 +164,17 @@
   100%{
     transform: scale(1);
   }
+}
+
+@keyframes from-top {
+ 0%{
+    transform: translateY(-100%);
+    opacity: 0;
+ }
+ 100%{
+    transform: translateY(0);
+    opacity: 1;
+ }
 }
 
 :root{
