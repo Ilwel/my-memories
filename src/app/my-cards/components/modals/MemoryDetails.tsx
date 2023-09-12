@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { XCircle } from "lucide-react";
 import { close }  from '@/redux/features/memoryDetailsSlicer'
 import MemoryCard, { RarityBadge } from "../MemoryCard";
+import MemoryCardVerse from "../MemoryCardVerse";
 
 export default function MemoryDetails(){
 
@@ -14,7 +15,13 @@ export default function MemoryDetails(){
     ?<div className="modal z-10">
       <div className="bg-surface h-2/3 w-3/5 rounded p-8 relative flex gap-8 items-start from-top">
         <XCircle height={30} width={30} onClick={() => dispatch(close())} color={"#eb6f92"} className=" info"/>
-        <MemoryCard inDetails={true} id={id as string} rarity="ur"/>
+        <div className="flip-container relative p-0.5 " style={{perspective:1000}}>
+          <div className="flip-inner w-72 aspect-[9/12] gap-2 duration-700"  style={{transformStyle:"preserve-3d"}}>
+            <MemoryCardVerse inDetails={true} id={id as string} rarity="ur"/>
+            <MemoryCard inDetails={true} id={id as string} rarity="ur"/>
+          </div>
+
+        </div>
         <div className="h-full flex flex-col gap-2 items-start">
           <h2 className={"ur background-animate bg-clip-text text-transparent"} >Primeiro Encontro</h2>
           <p className="text-subtle"> <span className="font-bold">De:</span>  Ilwel</p>

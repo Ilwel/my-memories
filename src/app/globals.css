@@ -52,6 +52,11 @@
 }
 
 @layer utilities{
+
+  .default{
+    @apply bg-gradient-to-r from-love to-subtle;
+  }
+
   .ur{
     @apply bg-gradient-to-r from-gold via-love to-gold-2
   }
@@ -115,6 +120,19 @@
   .text-gr{
     @apply text-transparent bg-clip-text
   }
+}
+
+
+.backface-hidden{
+  backface-visibility: hidden;
+}
+
+.rotate-Y-180{
+  transform: rotateY(180deg);
+}
+
+.flip-container:hover .flip-inner{
+  transform: rotateY(180deg);
 }
 
 .background-animate {

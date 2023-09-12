@@ -60,8 +60,8 @@ export default function MemoryCard(props: MemoryCardProps){
   const styles = descColors[props.rarity as keyof typeof descColors]
 
   return (
-    <div className={props.rarity + `${!props.inDetails ? ' absolute' : ' relative'}` + " background-animate p-0.5 rounded " + props.animation}>    
-      <div className={" select-none cursor-pointer w-72 aspect-[9/12] flex gap-2 flex-col items-start bg-surface p-8 rounded "}>
+    <div className={props.rarity + " backface-hidden absolute background-animate p-0.5 rounded " + props.animation} >    
+      <div className={" select-none cursor-pointer w-72 aspect-[8.5/12] flex gap-2 flex-col items-start bg-surface p-8 rounded "}>
         {!props.inDetails && (
           <Info onClick={ () => dispatch(open('1'))} color={styles.desc.more}  className={" info"}/>
         )}
@@ -76,7 +76,7 @@ export default function MemoryCard(props: MemoryCardProps){
             </p>
           </div>
           <p className={props.rarity + " card-count"}>1/1</p>
-          <RarityBadge className=" ml-auto relative top-4 left-4" rarity={props.rarity} />
+          <RarityBadge className=" ml-auto absolute bottom-4 right-4" rarity={props.rarity} />
         </div>
     </div>
   )
