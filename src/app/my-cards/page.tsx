@@ -5,7 +5,8 @@ import StackPair from "./components/StackPair";
 const cards = ['ur', 'sr', 'r', 'n'].map((item, index) => {
   return {
     id: String(index + 1),
-    rarity: item as keyof typeof Rarity
+    rarity: item as keyof typeof Rarity,
+    inDetails: false
   }
 })
 
