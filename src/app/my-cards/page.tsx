@@ -13,7 +13,7 @@ const cards = ['ur', 'sr', 'r', 'n'].map((item, index) => {
 export default function MyCards(){
 
   return (
-    <div className="flex items-center justify-center h-screen gap-6">
+    <div className="flex flex-col sm:flex-row items-center justify-center h-screen gap-2 xl:gap-6">
       <StackPair cards={cards}/>
     </div>
   )

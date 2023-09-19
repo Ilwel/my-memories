@@ -21,7 +21,7 @@ export default function MemoryStack({stackId, stack, setStack, auxStack, setAuxS
   }
 
   return (
-    <div onClick={e => moveCardToAuxStack(e)} className="realtive w-80 aspect-[10/14] bg-surface flex items-center justify-center p-2 rounded">
+    <div onClick={e => moveCardToAuxStack(e)} className="realtive xl:w-80 w-60 aspect-[10/14] bg-surface flex items-center justify-center p-1 rounded">
       <h2 className="select-none text-muted"> &lt;/&gt;  </h2>
       {stack.map(card => (
         <MemoryCard inDetails={false} animation={stackId} key={card.id + "-" + stackId} id={card.id} rarity={card.rarity}/>
